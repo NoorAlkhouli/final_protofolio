@@ -10,7 +10,7 @@ import Projects from './pages/Projects.jsx'
 import Education from './pages/Education.jsx'
 
 
-const routes = createHashRouter([
+const routes = createBrowserRouter([
   {
     path: '/',
     element: < Root />,
@@ -38,7 +38,10 @@ const routes = createHashRouter([
     ]
 
   }
-])
+],
+{
+  basename: "/final_protofolio"
+})
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={routes} />
